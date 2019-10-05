@@ -8,8 +8,4 @@ import { environment } from '../../../environments/environment';
 })
 export class HomeComponent {
   authUrl = environment.githubAuthUrl;
-
-  constructor() {
-    console.log('>>>>>> ', environment.production)
-  }
 }
