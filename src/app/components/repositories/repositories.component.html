@@ -1,0 +1,12 @@
+<div class="container d-flex">
+  <div *ngIf="repositories else loading ">
+    <div *ngFor='let repository of repositories'>
+      <a [href]="repository.html_url">{{repository.name}}</a>
+    </div>
+  </div>
+  
+  <ng-template #loading>
+    <h4 class="mr-3">Loading data</h4>
+    <div class="spinner-border text-success" role="status"></div>
+  </ng-template>
+</div>
